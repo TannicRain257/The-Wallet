@@ -26,5 +26,41 @@
     <img src="https://th.bing.com/th/id/OIP.uf6sLmvFy9WEIOlF-M9SMQHaDt?pid=ImgDet&rs=1" alt="Its oppin time">
     <p class="username">@THE GOAT</p>
     <P>i <strong>like</strong> the <em>Cheifs</em>...</P>
+     <div class="tab-container">
+        <div class="tab-button" onclick="showTab('tab1')">Tab 1</div>
+        <div class="tab-button" onclick="showTab('tab2')">Tab 2</div>
+        <div class="tab-button" onclick="showTab('tab3')">Tab 3</div>
+    </div>
+
+    <div class="tab-content" id="tab1">
+        <h2>Tab 1 Content</h2>
+        <p>This is the content for Tab 1.</p>
+    </div>
+
+    <div class="tab-content" id="tab2">
+        <h2>Tab 2 Content</h2>
+        <p>This is the content for Tab 2.</p>
+    </div>
+
+    <div class="tab-content" id="tab3">
+        <h2>Tab 3 Content</h2>
+        <p>This is the content for Tab 3.</p>
+    </div>
+
+    <script>
+        // JavaScript function to show the selected tab
+        function showTab(tabId) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.style.display = 'none');
+
+            // Show the selected tab content
+            const selectedTab = document.getElementById(tabId);
+            selectedTab.style.display = 'block';
+        }
+
+        // Show the first tab by default
+        showTab('tab1');
+    </script>
   </body>
 </html>
