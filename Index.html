@@ -85,7 +85,34 @@ img {
     <div class="slideshow-container">
         <img id="slideshow-img" src="image1.jpg" alt="Slideshow Image">
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">// script.js
+
+// Array of image URLs
+const images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // Add more image URLs as needed
+
+// Get the image element
+const slideshowImg = document.getElementById("slideshow-img");
+
+// Set the initial image index
+let currentImageIndex = 0;
+
+// Function to change the image
+function changeImage() {
+    // Change the image source to the next image
+    slideshowImg.src = images[currentImageIndex];
+
+    // Increment the image index
+    currentImageIndex++;
+
+    // If we reach the end, start from the beginning
+    if (currentImageIndex === images.length) {
+        currentImageIndex = 0;
+    }
+}
+
+// Call the changeImage function at intervals (e.g., every 3 seconds)
+setInterval(changeImage, 3000); // Change image every 3 seconds (adjust as needed)
+</script>
     
     <div class="tab-content" id="tab2">
         <h2 style="color: white">Map</h2>
