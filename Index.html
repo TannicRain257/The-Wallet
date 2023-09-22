@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
+<head>
     <meta charset="UTF-8">
-    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gathering Storm</title>
     <style>
-
-/* styles.css */
-
-/* Container styling */
-.slideshow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Adjust to your preferred height */
-}
-
-/* Image styling */
-img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    max-height: 100%; /* Ensure the image maintains aspect ratio */
-}
-
-      
-      /* Using a CSS color name (dark gray) */
-        Body {
-            background-color: black;
+        /* Container styling */
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust to your preferred height */
         }
 
-      /* Tab Container */
+        /* Image styling */
+        img {
+            max-width: 100%; /* Ensure the image fits within the container */
+            max-height: 100%; /* Ensure the image maintains aspect ratio */
+        }
+
+        /* Using a CSS color name (dark gray) */
+        body {
+            background-color: black;
+            color: white; /* Text color for better readability */
+        }
+
+        /* Tab Container */
         .tab-container {
             display: flex;
             justify-content: space-between;
@@ -56,73 +51,68 @@ img {
             padding: 20px;
         }
 
-      .tab-content{
-        text-align: center;
-      }
+        .tab-content {
+            text-align: center;
+        }
 
         /* Show the active tab */
         .active-tab {
             display: block;
         }
-
     </style>
-    
-  </head>
-  <body>
-    
-     <div class="tab-container">
+</head>
+<body>
+    <div class="tab-container">
         <div class="tab-button" onclick="showTab('tab1')">News</div>
         <div class="tab-button" onclick="showTab('tab2')">Map</div>
         <div class="tab-button" onclick="showTab('tab3')">You</div>
     </div>
-    
 
     <div class="tab-content" id="tab1">
-        <h2 style="color: white">General Info/Announcements</h2>
-        <p><div class="slideshow-container">
-        <img id="slideshow-img" src="https://th.bing.com/th/id/OIP.uf6sLmvFy9WEIOlF-M9SMQHaDt?w=302&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Slideshow Image">
-    </div>
-   <script>
-    // JavaScript for the image slideshow
-    const images = ["https://th.bing.com/th/id/OIP.uf6sLmvFy9WEIOlF-M9SMQHaDt?w=302&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7", "https://th.bing.com/th/id/OIP.ZyW1eLzCc5M5tdxiU9CNagHaHa?w=209&h=210&c=7&r=0&o=5&dpr=1.5&pid=1.7", "https://th.bing.com/th/id/OIP.pLMpKyRFcpPR1KNDL_OC3wHaE0?w=288&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7"];
-    const slideshowImg = document.getElementById("slideshow-img");
-    let currentImageIndex = 0;
-
-    function changeImage() {
-        slideshowImg.src = images[currentImageIndex];
-        currentImageIndex++;
-
-        if (currentImageIndex === images.length) {
-            currentImageIndex = 0;
-        }
-    }
-
-    // Call the changeImage function at intervals (e.g., every 3 seconds)
-    setInterval(changeImage, 3000);
-</script></p>
+        <h2>General Info/Announcements</h2>
+        <p>
+            <div class="slideshow-container">
+                <img id="slideshow-img" src="https://th.bing.com/th/id/OIP.uf6sLmvFy9WEIOlF-M9SMQHaDt?w=302&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Slideshow Image">
+            </div> 
+        </p>
     </div>
 
-   
-    
     <div class="tab-content" id="tab2">
-        <h2 style="color: white">Map</h2>
-        <p> <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXMkA3dfetpaCTtC5ilMgj3E4Cu_uh94NroBUCOJDIuQI_FfYkkmCqwarJNxaLSfdfzq0Nf2ndjuS2/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="284" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</p>
+        <h2>Map</h2>
+        <p>
+           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXMkA3dfetpaCTtC5ilMgj3E4Cu_uh94NroBUCOJDIuQI_FfYkkmCqwarJNxaLSfdfzq0Nf2ndjuS2/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="284" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </p>
+        <script>
+            // JavaScript for the image slideshow
+            const images = ["https://th.bing.com/th/id/OIP.uf6sLmvFy9WEIOlF-M9SMQHaDt?w=302&h=175&c=7&r=0&o=5&dpr=1.5&pid=1.7", "https://th.bing.com/th/id/OIP.ZyW1eLzCc5M5tdxiU9CNagHaHa?w=209&h=210&c=7&r=0&o=5&dpr=1.5&pid=1.7", "https://th.bing.com/th/id/OIP.pLMpKyRFcpPR1KNDL_OC3wHaE0?w=288&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7"];
+            const slideshowImg = document.getElementById("slideshow-img");
+            let currentImageIndex = 0;
+
+            function changeImage() {
+                slideshowImg.src = images[currentImageIndex];
+                currentImageIndex++;
+
+                if (currentImageIndex === images.length) {
+                    currentImageIndex = 0;
+                }
+            }
+
+            // Call the changeImage function at intervals (e.g., every 3 seconds)
+            setInterval(changeImage, 3000);
+        </script>
     </div>
 
     <div class="tab-content" id="tab3">
-        <h2 style="color: white">Your Diplomacy Slide</h2>
+        <h2>Your Diplomacy Slide</h2>
         <p></p>
     </div>
 
     <script>
         // JavaScript function to show the selected tab
         function showTab(tabId) {
-            // Hide all tab content
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(content => content.style.display = 'none');
 
-            // Show the selected tab content
             const selectedTab = document.getElementById(tabId);
             selectedTab.style.display = 'block';
         }
@@ -130,5 +120,5 @@ img {
         // Show the first tab by default
         showTab('tab1');
     </script>
-  </body>
+</body>
 </html>
